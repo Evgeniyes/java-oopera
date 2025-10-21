@@ -7,7 +7,7 @@ import java.util.Objects;
 public class Person {
     private String name;
     private String surname;
-    private Gender gender;
+    protected Gender gender;
 
     public Person(String name, String surname, Gender gender) {
         this.name = name;
@@ -32,7 +32,7 @@ public class Person {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Person actor = (Person) o;
-        return name.equals(actor.getName()) && surname.equals(actor.getSurname()) && gender == actor.getGender();
+        return name.equals(actor.getName()) && surname.equals(actor.getSurname());
     }
 
     @Override
